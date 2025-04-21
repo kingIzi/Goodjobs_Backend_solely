@@ -119,17 +119,18 @@ def verify_signup_otp(request):
         current_otp = OTP.objects.filter(phone_number=phone_number, otp_value=otp_value)
         print(f"Phone number: {phone_number}, OTP value: {otp_value}")
         if current_otp.exists():
-            user_tuple = CustomUser.objects.filter(phone_number=phone_number)[0]
-            token = Token.objects.create(user=user_tuple) 
-            plan = Plan.objects.filter(name='Free')
-            Subscription.objects.get_or_create(user=user_tuple, plan=plan[0], 
-                                               end_date=datetime.now().date() + timedelta(days=3),
-                                               active=True, is_free_trial=True)
-            rxFrom(OTP.objects.filter(phone_number=phone_number)).subscribe(on_next=lambda otp: otp.delete())
-            return JsonResponse({'status': 'success', 'message': 'User created successfully', 'token': str(token),
-                                 'first_name': user_tuple.first_name, 'user_id': user_tuple.id,
-                                 'phone_number': user_tuple.phone_number,
-                                 'status_code': 201}, status=201)
+            # user_tuple = CustomUser.objects.filter(phone_number=phone_number)[0]
+            # token = Token.objects.create(user=user_tuple) 
+            # plan = Plan.objects.filter(name='Free')
+            # Subscription.objects.get_or_create(user=user_tuple, plan=plan[0], 
+            #                                    end_date=datetime.now().date() + timedelta(days=3),
+            #                                    active=True, is_free_trial=True)
+            # rxFrom(OTP.objects.filter(phone_number=phone_number)).subscribe(on_next=lambda otp: otp.delete())
+            # return JsonResponse({'status': 'success', 'message': 'User created successfully', 'token': str(token),
+            #                      'first_name': user_tuple.first_name, 'user_id': user_tuple.id,
+            #                      'phone_number': user_tuple.phone_number,
+            #                      'status_code': 201}, status=201)
+            return JsonResponse({'status': 'error', 'message': "Yango oyo", 'status_code': 200, }, status=404)
         else:
             return JsonResponse({'status': 'error', 'message': "Invalid verification code", 'status_code': 404, }, status=404)
         # if current_otp.exists():
