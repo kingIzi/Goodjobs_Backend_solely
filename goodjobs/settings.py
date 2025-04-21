@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 import sentry_sdk
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,14 +132,6 @@ WSGI_APPLICATION = 'goodjobs.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': '',
-    #     'USER': '',
-    #     'PASSWORD': '',
-    #     'HOST': 'localhost',
-    #     'PORT': '3306',
-    # }
     'default': {
         'ENGINE': 'mssql',
         'NAME': 'WebApplication1.Data.AppDatabaseContext',
@@ -152,6 +145,10 @@ DATABASES = {
         },
     }
 }
+
+DATABASES["default"] = dj_database_url.parse("postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs")
+
+# postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
