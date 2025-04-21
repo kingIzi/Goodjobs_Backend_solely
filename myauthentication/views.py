@@ -116,15 +116,6 @@ def verify_signup_otp(request):
         
         phone_number = f"0{form.cleaned_data['phone_number']}"
         otp_value = form.cleaned_data['otp_value']
-        # try:
-        #     current_otp = OTP.objects.filter(phone_number=phone_number, otp_value=otp_value)
-        #     if current_otp.exists():
-        #         return JsonResponse({'status': 'error', 'message': "OTP code found", 'status_code': 404, }, status=404)
-        #     else:
-        #         return JsonResponse({'status': 'error', 'message': "Invalid verification code", 'status_code': 404, }, status=404)
-        # except Exception as e:
-        #     print(e)
-        #     return JsonResponse({'status': 'error', 'message': "Could retrieve OTP and phone number", 'status_code': 404, }, status=404)
         current_otp = OTP.objects.filter(phone_number=phone_number, otp_value=otp_value)
         if current_otp.exists():
             user_tuple = CustomUser.objects.filter(phone_number=phone_number)[0]
