@@ -123,11 +123,12 @@ def verify_signup_otp(request):
                                                     last_name=current_otp[0].last_name,
                                                     phone_number=phone_number,
                                                     email=current_otp[0].email,
-                                                    is_staff=1
                                                 )
             token = Token.objects.create(user=user_tuple[0]) 
             plan = Plan.objects.filter(name='Free')
-            Subscription.objects.get_or_create(user=user_tuple[0], plan=plan[0], end_date=datetime.now().date() + timedelta(days=3),active=True, is_free_trial=True)
+            Subscription.objects.get_or_create(user=user_tuple[0], plan=plan[0], 
+                                               end_date=datetime.now().date() + timedelta(days=3),
+                                               active=True, is_free_trial=True)
             rxFrom(OTP.objects.filter(phone_number=phone_number)).subscribe(on_next=lambda otp: otp.delete())
             return JsonResponse({'status': 'success', 'message': 'User created successfully', 'token': str(token),
                                  'first_name': user_tuple[0].first_name, 'user_id': user_tuple[0].id,
