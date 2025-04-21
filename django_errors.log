@@ -4280,3 +4280,49 @@ Traceback (most recent call last):
     raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
 django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
 [35;1mHTTP GET / 500 [0.00, 127.0.0.1:63585][0m
+Internal Server Error: /api/auth/signup/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\utils\deprecation.py", line 146, in __acall__
+    response = await sync_to_async(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+[35;1mHTTP POST /api/auth/signup/ 500 [0.02, 127.0.0.1:49879][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50048][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50048][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50067][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50080][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50094][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50110][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50118][0m
+Internal Server Error: /api/auth/verify_signup_otp/
+[35;1mHTTP POST /api/auth/verify_signup_otp/ 500 [0.02, 127.0.0.1:50118][0m
