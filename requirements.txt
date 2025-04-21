@@ -100,7 +100,7 @@ incremental==22.10.0
 #ipykernel @ file:///D:/bld/ipykernel_1719845595208/work
 ipykernel==6.24.0
 #ipython @ file:///D:/bld/ipython_1701831845989/work
-ipython==8.12.0
+#ipython==8.12.0
 itsdangerous==2.1.2
 #jedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1733300866624/work
 jedi==0.18.2
@@ -216,7 +216,7 @@ twisted-iocpsupport==1.0.4
 txaio==23.1.1
 typing-inspect==0.9.0
 #typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1733188668063/work
-typing_extensions==4.7.1
+#typing_extensions==4.7.1
 tzdata==2025.1
 tzlocal==4.3
 uritemplate==4.1.1
