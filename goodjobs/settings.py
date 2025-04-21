@@ -148,7 +148,7 @@ DATABASES = {
 }
 
 #DATABASES["default"] = dj_database_url.parse("postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs")
-DATABASES["default"] = dj_database_url.parse(database_url)
+DATABASES["default"] = dj_database_url.parse("postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs")
 
 # postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs
 

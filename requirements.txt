@@ -221,7 +221,7 @@ urllib3==1.26.13
 vine==5.1.0
 virtualenv==20.21.0
 #wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1733231326287/work
-wcwidth==0.2.6
+#wcwidth==0.2.6
 webencodings==0.5.1
 Werkzeug==2.3.6
 xhtml2pdf==0.2.8
