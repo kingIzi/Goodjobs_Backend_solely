@@ -188,7 +188,8 @@ reportlab==3.6.12
 requests==2.32.3
 rsa==4.9
 Rx==3.2.0
-s3transfer==0.6.1
+#s3transfer==0.6.1
+s3transfer==0.10.0
 semantic-version==2.10.0
 sentry-sdk==2.23.1
 service-identity==23.1.0
