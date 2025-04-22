@@ -284,8 +284,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-#9os=eg^!(9eo506j_1gk!q-vs8z3++!e@#l%qb!ocxd-&k_@p'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-#9os=eg^!(9eo506j_1gk!q-vs8z3++!e@#l%qb!ocxd-&k_@p'
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
@@ -396,6 +396,18 @@ WSGI_APPLICATION = 'goodjobs.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'defaultdb',
+    #     'USER': 'avnadmin',
+    #     'PASSWORD': 'AVNS_VicVtOUqytil165-6-v',
+    #     'HOST': 'mysql-22941299-scott-6d35.h.aivencloud.com',
+    #     'PORT': '25618',
+    #     # 'OPTIONS': {
+    #     #     'driver': 'ODBC Driver 17 for SQL Server',  
+    #     #     'Trusted_Connection': 'yes'
+    #     # },
+    # }
     'default': {
         'ENGINE': 'mssql',
         'NAME': 'WebApplication1.Data.AppDatabaseContext',
@@ -410,8 +422,8 @@ DATABASES = {
     }
 }
 
-#DATABASES["default"] = dj_database_url.parse("postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs")
 DATABASES["default"] = dj_database_url.parse("postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs")
+#DATABASES["default"] = dj_database_url.parse("postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs")
 
 # postgresql://pretty_goodjobs_user:orGtyX5PX9eZlsrmO5GTzf5wtGpPwGnb@dpg-d02rrimuk2gs73epgk5g-a.oregon-postgres.render.com/pretty_goodjobs
 
