@@ -119,7 +119,7 @@ def verify_signup_otp(request):
         try:
             current_otp = OTP.objects.filter(phone_number=phone_number, otp_value=otp_value).first()
             print("This does not execute")
-            if current_otp.exists():
+            if current_otp:
                 user_tuple = CustomUser.objects.filter(phone_number=phone_number).first()
                 token = Token.objects.create(user=user_tuple) 
                 plan = Plan.objects.filter(name='Free').first()
