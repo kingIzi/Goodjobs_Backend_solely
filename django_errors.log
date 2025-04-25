@@ -4386,3 +4386,15 @@ Traceback (most recent call last):
     raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
 django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
 [35;1mHTTP GET /favicon.ico 500 [0.01, 127.0.0.1:62053][0m
+Internal Server Error: /api/check_exists_company/
+[35;1mHTTP POST /api/check_exists_company/ 500 [0.02, 127.0.0.1:61257][0m
+Internal Server Error: /api/check_exists_company/
+[35;1mHTTP POST /api/check_exists_company/ 500 [0.01, 127.0.0.1:61257][0m
+Internal Server Error: /api/check_exists_company/
+[35;1mHTTP POST /api/check_exists_company/ 500 [0.01, 127.0.0.1:61257][0m
+Internal Server Error: /api/check_exists_company/
+[35;1mHTTP POST /api/check_exists_company/ 500 [0.01, 127.0.0.1:61298][0m
+Internal Server Error: /api/check_exists_company/
+[35;1mHTTP POST /api/check_exists_company/ 500 [0.01, 127.0.0.1:61298][0m
+Internal Server Error: /api/check_exists_company/
+[35;1mHTTP POST /api/check_exists_company/ 500 [0.01, 127.0.0.1:61298][0m

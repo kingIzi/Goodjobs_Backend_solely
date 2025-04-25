@@ -13,12 +13,19 @@ from .models import UserProfile, JobPost,notify_users_on_new_job
 from .serializers import JobPostSerializer
 from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
+from django.conf import settings
+import boto3
+from botocore.client import Config
+from urllib.parse import urlparse
+
+
+
 
 from decimal import Decimal
 
 
 
-from myauthentication.validators import FetchUsersValidator,AddJobCategoryForm,AddJobPostForm
+from myauthentication.validators import AddCompanyForm, CheckExistsCompanyForm, FetchUsersValidator,AddJobCategoryForm,AddJobPostForm
 from utilities.file_uploader import upload_file
 
 
@@ -375,25 +382,89 @@ def fetch_search(request):
                              'data': list(jobpost_serializer)}, status=200)
     else:
         return JsonResponse({'status': 'error', 'message': 'JobPost search not found', 'status_code': 404, 'data': []})
-
-
+    
+@csrf_exempt
+def check_exists_company(request):
+    try:
+        if request.method != 'POST': raise 'NOT POST'
+        form = CheckExistsCompanyForm(request.POST)
+        if not form.is_valid():
+            return JsonResponse({'message': form.errors,'status': 'error','status_code': 400},status=400)
+        company_name = form.cleaned_data['name']
+        companies = Company.objects.filter(name__iexact=company_name)
+        return JsonResponse({'message': companies.exists(),'status': 'success','status_code': 200},status=200)           
+    except:
+        return JsonResponse({'status': 'error', 'message': 'An error occurred on the server', 'status_code': 500}, status=500)
+        
 @csrf_exempt
 def add_job_company(request):
-    name = request.POST.get("name")
-    about_company = request.POST.get("about_company")
+    try:
+        if request.method != 'POST': 
+            raise 'NOT POST'
+        form = AddCompanyForm(request.POST)
+        if not form.is_valid():
+            return JsonResponse({'message': form.errors,'status': 'error','status_code': 400},status=400)
+        elif 'company_image' not in request.FILES:
+            return JsonResponse({'status': 'error','message': 'No company logo provided.'}, status=400)
+        else:
+            name = form.cleaned_data['name']
+            about_company = form.cleaned_data['about_company']
+            company_image = request.FILES.get('company_image')
+            company = Company(
+                name=name, about_company=about_company, image=company_image
+            )
+            company.save()
+            return JsonResponse(
+                {'status': 'success', 
+                 'status_code': 200, 
+                 'message': 'Company Added  successfully.',
+                }, status=200)
+    except:
+        return JsonResponse({'status': 'error', 'message': 'An error occurred on the server', 'status_code': 500}, status=500)
+    
+
+@csrf_exempt
+def fetch_job_company_second(request):
+    def generate_presigned_url(bucket, key, expiration=3600):
+        s3_client = boto3.client('s3',
+                                region_name=settings.AWS_S3_REGION_NAME,
+                                aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+                                aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY)
+        return s3_client.generate_presigned_url('get_object',
+                                                Params={'Bucket': bucket, 'Key': key},
+                                                ExpiresIn=expiration)
+    
+    def extract_s3_key_from_url(url):
+        parsed_url = urlparse(url)
+        return parsed_url.path.lstrip('/')
 
     try:
-        if 'company_image' not in request.FILES:
-            return JsonResponse({'error': 'No CV file was provided.'}, status=400)
+        if request.method != "POST":
+            raise Exception("NOT POST")
+        
+        companies = Company.objects.all()
+        company_serializer = CompanySerializer(companies, many=True).data
+        
+        # Assuming company_serializer has a 'file_key' or 's3_key' field
+        for company in company_serializer:
+            s3_key = extract_s3_key_from_url(company.get('image'))  # or however it's stored
+            if s3_key:
+                company['signed_url'] = generate_presigned_url(settings.AWS_STORAGE_BUCKET_NAME, s3_key)
 
-        company_image = request.FILES['company_image']
+        return JsonResponse({
+            'status': 'success',
+            'status_code': 200,
+            'message': 'Company Fetched successfully.',
+            'data': list(company_serializer)
+        }, status=200)
 
-        Company.objects.create(name=name, about_company=about_company, image=company_image)
-        return JsonResponse({'status': 'success', 'status_code': 200, 'message': 'Company Added  successfully.',
-                             }, status=200, )
-    except:
-        return JsonResponse({'status': "error", 'message': 'Something went wrong', "status_code": 404},
-                            status=404)
+    except Exception as e:
+        return JsonResponse({
+            'status': 'error',
+            'message': str(e) or 'Invalid request method',
+            'status_code': 400
+        }, status=400)
+
 
 
 @csrf_exempt
@@ -403,7 +474,7 @@ def fetch_job_company(request):
         companies = Company.objects.all()
         company_serializer = CompanySerializer(companies, many=True).data
         return JsonResponse({'status': 'success', 'status_code': 200, 'message': 'Company Fetched successfully.',
-                            'data': list(company_serializer)}, status=200, )
+                            'data': list(company_serializer)}, status=200)
     except:
         return JsonResponse({'status': 'error', 'message': 'Invalid request method', 'status_code': 400}, status=400)
 
@@ -460,21 +531,24 @@ def add_job_post(request):
                 salary_max=Decimal(salary_max).quantize(Decimal("0.01")) if salary_max else None, job_description=job_description,
                 job_post_url=job_post_url, deadline_day=deadline,
             )
-        except: 
-            pass
-
-        filtered_job_post = JobPost.objects.filter(
-                company=company, location=location, job_title=job_title, job_type=job_type,
-                salary_min=Decimal(salary_min).quantize(Decimal("0.01")) if salary_min else None, 
-                salary_max=Decimal(salary_max).quantize(Decimal("0.01")) if salary_max else None, job_description=job_description,
-                job_post_url=job_post_url, deadline_day=deadline,
-        )
-
-        if filtered_job_post.exists():
-            job_categories = JobPostCategories.objects.create(job_post=filtered_job_post[0],
-                                                              job_category_id=JobCategory.objects.get(id=category_id))
             return JsonResponse({'status': 'success', 'status_code': 200, 'message': 'JobPost Added successfully.'},
                                     status=200)
+        except Exception as e:
+            print(e) 
+            return JsonResponse({'status': 'error', 'message': 'Failed to create job post', 'status_code': 400}, status=400)
+
+        # filtered_job_post = JobPost.objects.filter(
+        #         company=company, location=location, job_title=job_title, job_type=job_type,
+        #         salary_min=Decimal(salary_min).quantize(Decimal("0.01")) if salary_min else None, 
+        #         salary_max=Decimal(salary_max).quantize(Decimal("0.01")) if salary_max else None, job_description=job_description,
+        #         job_post_url=job_post_url, deadline_day=deadline,
+        # )
+
+        # if filtered_job_post.exists():
+        #     job_categories = JobPostCategories.objects.create(job_post=filtered_job_post[0],
+        #                                                       job_category_id=JobCategory.objects.get(id=category_id))
+        #     return JsonResponse({'status': 'success', 'status_code': 200, 'message': 'JobPost Added successfully.'},
+        #                             status=200)
 
         return JsonResponse({'status': 'error', 'message': 'Failed to add job post', 'status_code': 400}, status=400)
     except Exception as e:

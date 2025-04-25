@@ -31,7 +31,8 @@ import json
 
 @csrf_exempt
 def send_sms_message(phone_number, message,country_code = '+255'): 
-    conn = client.HTTPSConnection("lqjgy2.api.infobip.com")
+    #conn = client.HTTPSConnection("lqjgy2.api.infobip.com")
+    conn = client.HTTPSConnection("4eze58.api.infobip.com")
     prefix = country_code.replace("+", "")
     payload = json.dumps({
         "messages": [
@@ -43,7 +44,8 @@ def send_sms_message(phone_number, message,country_code = '+255'):
         ]
     })
     headers = {
-        'Authorization': 'App ab5e5e11505b02c6db662098b7c9a2d1-7d106c3e-b9ed-4698-9353-901c72cbe065',
+        #'Authorization': 'App ab5e5e11505b02c6db662098b7c9a2d1-7d106c3e-b9ed-4698-9353-901c72cbe065',
+        'Authorization': 'App 6c08acc93799e1855ab66ca010f5fd57-d333325d-87b3-486c-a780-5c6f90590af3',
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     }

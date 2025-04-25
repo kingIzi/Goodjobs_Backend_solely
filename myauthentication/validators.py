@@ -73,3 +73,9 @@ class ResendOtpForm(forms.Form):
                                         message="Invalid phone number, please enter the mobile number without the leading 0 or country code.",
                                         code='invalid_phone_number'
                                    )])
+    
+class CheckExistsCompanyForm(forms.Form):
+    name = forms.CharField(required=True,error_messages={'required': 'You must provide a company name'})  
+
+class AddCompanyForm(CheckExistsCompanyForm):
+    about_company = forms.CharField(required=True,error_messages={'required': 'You must provide a company description'})

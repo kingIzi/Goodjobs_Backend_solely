@@ -17,7 +17,8 @@ class JobCategory(models.Model):
 class Company(models.Model):
     name = models.CharField(max_length=255)
     about_company = models.TextField()
-    image = models.ImageField(upload_to='company_images/')  # Ensure you have Pillow installed and MEDIA_URL configured
+    #image = models.ImageField(upload_to='company_images/')  # Ensure you have Pillow installed and MEDIA_URL configured
+    image = models.FileField(upload_to='company_images/')
 
     def __str__(self):
         return self.name
@@ -31,7 +32,8 @@ class JobPost(models.Model):
     salary_min = models.DecimalField(max_digits=38, decimal_places=2, null=True, blank=True)
     salary_max = models.DecimalField(max_digits=38, decimal_places=2, null=True, blank=True)
     datetime_posted = models.DateTimeField(default=timezone.now)
-    job_description = models.CharField(max_length=1000)
+    #job_description = models.CharField(max_length=1000)
+    job_description = models.TextField()
     job_post_url = models.CharField(max_length=1000)
     #categories = models.ManyToManyField(JobCategory, blank=True, null=True)
     #categories = models.ManyToManyField(JobCategory)
