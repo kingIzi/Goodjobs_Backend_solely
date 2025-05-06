@@ -54,3 +54,22 @@ def send_sms_message(phone_number, message,country_code = '+255'):
     data = res.read()
     print(data.decode("utf-8"))
     pass
+
+
+@csrf_exempt
+def send_sms_email(email, message): 
+    send_email_url = 'https://mandombe-api.vercel.app/send-email'
+    params = {
+        'fullName': 'GOODJOBS',
+        'message': message,
+        'email': email
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    #response = requests.post(send_email_url,headers=headers,json=payload)
+    response = requests.get(send_email_url, params=params,headers=headers)
+    if response.status_code == 200:
+        print(response.json())
+    else:
+        print(response.text) 
