@@ -31,29 +31,24 @@ import json
 
 @csrf_exempt
 def send_sms_message(phone_number, message,country_code = '+255'): 
-    #conn = client.HTTPSConnection("lqjgy2.api.infobip.com")
-    conn = client.HTTPSConnection("4eze58.api.infobip.com")
-    prefix = country_code.replace("+", "")
-    payload = json.dumps({
-        "messages": [
-            {
-                "destinations": [{"to": prefix + phone_number}],
-                "from": "ServiceSMS",
-                "text": message
-            }
-        ]
-    })
-    headers = {
-        #'Authorization': 'App ab5e5e11505b02c6db662098b7c9a2d1-7d106c3e-b9ed-4698-9353-901c72cbe065',
-        'Authorization': 'App 6c08acc93799e1855ab66ca010f5fd57-d333325d-87b3-486c-a780-5c6f90590af3',
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    url = 'https://apisms.beem.africa/v1/send'
+    payload = {
+        "source_addr": "GOODJOBS",
+        "schedule_time": "",
+        "encoding": "0",
+        "message": message,
+        "recipients": [
+                {
+                    "recipient_id": 1,
+                    "dest_addr": f'{country_code[1:]}{phone_number}'
+                }
+            ]
     }
-    conn.request("POST", "/sms/2/text/advanced", payload, headers)
-    res = conn.getresponse()
-    data = res.read()
-    print(data.decode("utf-8"))
-    pass
+    username = '102dbd7cdedacf4d'
+    password = 'YTQ1MWNhMmE0NWU4YjdlOWQ5ODM0ZTljNzdhMzc3NjBhOGYzNDdhNzhjMTY3YTkwMTYyZDQ2NGRjNjRkM2I3MA'
+    response = requests.request("POST", url, json=payload, auth=(username,password))
+    if response.status_code == 200:
+        return response.json()
 
 
 @csrf_exempt
