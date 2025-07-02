@@ -196,7 +196,8 @@ def login(request):
             otp_value = generateOTP()
             create_or_update_otp('', '', '', phone_number, otp_value)
             message = f'Weka token ili kuendelea. Token yako ni {otp_value}'
-            send_sms_message(form.cleaned_data.get('phone_number'), message)
+            print(message)
+            #send_sms_message(form.cleaned_data.get('phone_number'), message)
             return JsonResponse({'status': 'success', 'message': 'Please input otp to complete authentication',
                                         'status_code': 200}, status=200)
         else:

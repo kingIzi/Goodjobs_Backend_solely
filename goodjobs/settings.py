@@ -312,7 +312,10 @@ INSTALLED_APPS = [
     'tips',
     'paymentorder',
     'firebaseapp',
-    'analytics'
+    'analytics',
+    'rest_framework_swagger',
+    'rest_framework',
+    'drf_yasg',
 ]
 
 AUTH_USER_MODEL = 'myauthentication.CustomUser'
@@ -326,6 +329,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',  # <-- And here
         'rest_framework.authentication.SessionAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
 MIDDLEWARE = [
@@ -531,3 +535,14 @@ LOGGING = {
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 
+# Swagger
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    },
+    'USE_SESSION_AUTH': False,
+}

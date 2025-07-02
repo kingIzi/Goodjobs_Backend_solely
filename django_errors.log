@@ -4504,3 +4504,647 @@ Internal Server Error: /api/auth/login/
 [35;1mHTTP POST /api/auth/login/ 500 [4.54, 127.0.0.1:55438][0m
 Internal Server Error: /api/auth/login/
 [35;1mHTTP POST /api/auth/login/ 500 [4.12, 127.0.0.1:55438][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.02, 192.168.0.101:63084][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:63084][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:63084][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.03, 192.168.0.101:63545][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.02, 192.168.0.101:63880][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:63880][0m
+Internal Server Error: /api/redoc/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/redoc/ 500 [0.01, 192.168.0.101:63880][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:63880][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.02, 192.168.0.101:63972][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.02, 192.168.0.101:64116][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:64116][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:64116][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:64116][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:64116][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.02, 192.168.0.101:64311][0m
+Internal Server Error: /api/swagger/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/swagger/ 500 [0.01, 192.168.0.101:64311][0m
+Internal Server Error: /api/v1/swagger/schema
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 415, in initial
+    self.check_permissions(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\rest_framework\views.py", line 278, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+[35;1mHTTP GET /api/v1/swagger/schema 500 [0.01, 192.168.0.101:64609][0m
+Internal Server Error: /api/create_subscription/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\Documents\DEV\flutter\GoodThings\GoodThings\backend\goodjobs-backend\paymentorder\views.py", line 200, in create_subscription
+    make_payment_response = make_payment(user_id, subscription.id, amount, phone_number, provider, )
+  File "C:\Users\scott\Documents\DEV\flutter\GoodThings\GoodThings\backend\goodjobs-backend\paymentorder\views.py", line 157, in make_payment
+    azampay_transaction_id = checkout_response['azampay_transaction_id']
+TypeError: string indices must be integers
+[35;1mHTTP POST /api/create_subscription/ 500 [2.35, 192.168.100.38:47452][0m
+Internal Server Error: /api/create_subscription/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\Documents\DEV\flutter\GoodThings\GoodThings\backend\goodjobs-backend\paymentorder\views.py", line 200, in create_subscription
+    make_payment_response = make_payment(user_id, subscription.id, amount, phone_number, provider, )
+  File "C:\Users\scott\Documents\DEV\flutter\GoodThings\GoodThings\backend\goodjobs-backend\paymentorder\views.py", line 157, in make_payment
+    azampay_transaction_id = checkout_response['azampay_transaction_id']
+TypeError: string indices must be integers
+[35;1mHTTP POST /api/create_subscription/ 500 [5.26, 192.168.100.38:50624][0m
+Internal Server Error: /api/create_subscription/
+Traceback (most recent call last):
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\asgiref\sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\scott\miniconda3\envs\ya_django\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\scott\Documents\DEV\flutter\GoodThings\GoodThings\backend\goodjobs-backend\paymentorder\views.py", line 200, in create_subscription
+    make_payment_response = make_payment(user_id, subscription.id, amount, phone_number, provider, )
+  File "C:\Users\scott\Documents\DEV\flutter\GoodThings\GoodThings\backend\goodjobs-backend\paymentorder\views.py", line 157, in make_payment
+    azampay_transaction_id = checkout_response['azampay_transaction_id']
+TypeError: string indices must be integers
+[35;1mHTTP POST /api/create_subscription/ 500 [2.89, 192.168.100.38:35014][0m

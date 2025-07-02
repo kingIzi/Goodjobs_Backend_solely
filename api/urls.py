@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path, include, re_path
 
 from api.views import trigger_error
 from firebaseapp.views import get_user_notifications, create_update_firebase
@@ -8,6 +8,11 @@ from subscription.views import *
 from paymentorder.views import *
 from tips.views import *
 from analytics.views import user_transaction_summary
+from django.contrib import admin
+
+
+
+
 
 urlpatterns = [
     path('user_transaction_summary/', user_transaction_summary),
